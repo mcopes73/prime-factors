@@ -1,3 +1,5 @@
 #IDE metadata
 **.idea/**
 *.class
+.idea/**
+.idea*
