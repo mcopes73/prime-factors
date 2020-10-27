@@ -1,3 +1,4 @@
+import java.sql.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -21,34 +22,27 @@ public class NumberUtils {
         return factors;
     }
 
-    public static LinkedList<Integer> getNumbers(int number) {
+    public static ArrayList<Integer> GetPrimeFactors(int numero) {
         LinkedList<Integer> numbers = new LinkedList<>();
-        for(int i = 2; i< number; i++) {
-            while(number%i == 0) {
+        for(int i = 2; i< numero; i++){
+            while(numero%i == 0) {
                 numbers.add(i);
-                number = number/i;
+                numero = numero/i;
             }
         }
-        if(number >2) {
-            numbers.add(number);
+        if(numero >2){
+            numbers.add(numero);
         }
 
-        return numbers;
+        return new ArrayList<>(numbers);
     }
 
     public static Integer parseInput(String number) {
-        if (number.startsWith("f")) {
-            return Integer.parseInt(number.substring(1));
-        }
-
-        throw new IllegalArgumentException("Formato incorrecto");
-    }
-
-    public static Integer ParsePrimo(String number) {
-        if (number.startsWith("fp")) {
+        if (number.startsWith("f") || number.startsWith("fp")) {
             return Integer.parseInt(number.substring(2));
         }
 
         throw new IllegalArgumentException("Formato incorrecto");
     }
+
 }

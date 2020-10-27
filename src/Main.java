@@ -9,12 +9,15 @@ public class Main {
         String operationNumber = scanner.nextLine();
 
 
-        int number = NumberUtils.ParsePrimo(operationNumber);
-        System.out.println("Factorización prima:");
-        System.out.println(NumberUtils.getNumbers(number));
+        int number = NumberUtils.parseInput(operationNumber);
+        if (operationNumber.startsWith("fp")) {
+            System.out.println("Factorización prima:");
+            System.out.println(NumberUtils.GetPrimeFactors(number));
+        }
 
-        number = NumberUtils.parseInput(operationNumber);
-        System.out.println("Factorización:");
-        System.out.println(NumberUtils.getFactors(number));
+        if (operationNumber.startsWith("f")) {
+            System.out.println("Factorización:");
+            System.out.println(NumberUtils.getFactors(number));
+        }
     }
 }
