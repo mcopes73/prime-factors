@@ -1,11 +1,6 @@
-import java.sql.Array;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class NumberUtils {
-
-    private boolean esPrimo = false;
-
     public static List<Integer> getFactors(int number) {
 
         ArrayList<Integer> factors = new ArrayList<>();
@@ -22,9 +17,9 @@ public class NumberUtils {
         return factors;
     }
 
-    public static ArrayList<Integer> GetPrimeFactors(int numero) {
+    public static List<Integer> GetPrimeFactors(int numero) {
         LinkedList<Integer> numbers = new LinkedList<>();
-        for(int i = 2; i< numero; i++){
+        for(int i = 2; i< numero; i++) {
             while(numero%i == 0) {
                 numbers.add(i);
                 numero = numero/i;
