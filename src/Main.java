@@ -16,7 +16,7 @@ public class Main {
         }
 
         if (operationNumber.startsWith("f")) {
-            System.out.println("Factorización:");
+            System.out.println("Factores de " + number + ":");
             System.out.println(NumberUtils.getFactors(number));
         }
     }
