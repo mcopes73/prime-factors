@@ -8,8 +8,16 @@ public class Main {
         System.out.println("Ingrese una operación y un número:");
         String operationNumber = scanner.nextLine();
 
+
         int number = NumberUtils.parseInput(operationNumber);
-        System.out.println("Factores de " + number + ":");
-        System.out.println(NumberUtils.getFactors(number));
+        if (operationNumber.startsWith("fp")) {
+            System.out.println("Factorización prima:");
+            System.out.println(NumberUtils.GetPrimeFactors(number));
+        }
+
+        if (operationNumber.startsWith("f")) {
+            System.out.println("Factores de " + number + ":");
+            System.out.println(NumberUtils.getFactors(number));
+        }
     }
 }
