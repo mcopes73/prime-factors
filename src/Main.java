@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-// Hola
 public class Main {
 
     public static void main(String[] args) {
@@ -10,7 +9,7 @@ public class Main {
         String operationNumber = scanner.nextLine();
 
         int number = NumberUtils.parseInput(operationNumber);
-        System.out.println("Factorización:");
+        System.out.println("Factores de " + number + ":");
         System.out.println(NumberUtils.getFactors(number));
     }
 }
