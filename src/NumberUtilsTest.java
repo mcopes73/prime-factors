@@ -17,7 +17,7 @@ class NumberUtilsTest {
 
     @Test
     void test_getFactors() {
-        assertEquals(Arrays.asList(1, 2, 3, 4, 6, 12), NumberUtils.getFactors(12));
+        assertEquals(Arrays.asList(1, 2, 3, 4, 6, 12), NumberUtils.getFactors(12, false));
     }
 
 }
