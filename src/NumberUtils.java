@@ -18,7 +18,7 @@ public class NumberUtils {
     }
 
     public static Integer parseInput(String input) {
-        if (input.startsWith("f")) {
+        if (input.startsWith("f") || input.startsWith("F")) {
             return Integer.parseInt(input.substring(1));
         }
 
