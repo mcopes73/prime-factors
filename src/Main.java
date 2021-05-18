@@ -10,6 +10,6 @@ public class Main {
 
         int number = NumberUtils.parseInput(operationNumber);
         System.out.println("Factores de " + number + ":");
-        System.out.println(NumberUtils.getFactors(number));
+        System.out.println(NumberUtils.getFactors(number, operationNumber.startsWith("fp")));
     }
 }
